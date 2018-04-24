@@ -33,6 +33,7 @@
       tag.setAttribute('asnyc', '');
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
@@ -43,6 +44,13 @@
         document.getElementById('submit').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
+          
+        document.getElementById('address').addEventListener('keyup', function(e) {
+          if (e.keyCode == 13) {
+            geocodeAddress(geocoder, map);
+          }
+        });
+          
       }
 
       function geocodeAddress(geocoder, resultsMap) {
