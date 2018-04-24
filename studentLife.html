@@ -16,16 +16,25 @@
       </ul>
     </div>
     <div id="map"></div>
+    <script type='text/javascript' src='config.js'></script>
     <script>
+      //get api key
+      var mykey = config.MY_KEY;
+      var url = "https://maps.googleapis.com/maps/api/js?key=" + mykey + "&callback=initMap"
+      
+      var tag = document.createElement('script');
+      tag.src = url;
+      tag.setAttribute('defer','');
+      tag.setAttribute('asnyc', '');
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: {lat: 42.447917, lng: -76.481454}
         });
       }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap">
     </script>
   </body>
 </html>
