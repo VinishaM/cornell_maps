@@ -17,6 +17,7 @@
     </div>
     <div id="map"></div>
     <script type='text/javascript' src='config.js'></script>
+    <script type='text/javascript' src='content/studentLife.js'></script>
     <script>
       //get api key
       var mykey = config.MY_KEY;
@@ -33,6 +34,29 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: {lat: 42.447917, lng: -76.481454}
+        });
+
+        // loop though the content for this page, 
+        // make a new pin for each element, adding it to the map, and adding an event 
+        // listener to open the info on click.
+        console.log(content)
+        content.forEach(element => {     
+          // info about this element
+          var infowindow = new google.maps.InfoWindow({
+            content: element.info
+          });
+
+          // pin at the location of this element
+          var marker = new google.maps.Marker({
+            position: element.location,
+            map: map,
+            title: element.title
+          });
+
+          // add listener to the pin to open the info
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
         });
       }
     </script>
