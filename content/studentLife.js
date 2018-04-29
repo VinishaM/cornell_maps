@@ -13,5 +13,4 @@ var content = [
         '</div>'+
         '</div>',
     }, 
-    {},
 ]

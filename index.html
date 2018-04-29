@@ -4,20 +4,39 @@
     <title>Home</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
     <div id="nav">
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="index.html">Home</a></li>
-        <li role="presentation" ><a href="studentLife.html">Student Life</a></li>
-        <li role="presentation"><a href="search.html">Search</a></li>
+        <li role="presentation" class='active'><a href="index.html">Home</a></li>
+        <li role="presentation"><a href="studentLife.html">Student Life</a></li>
       </ul>
+    </div>
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="Ithaca, NY">
+      <input id="submit" type="button" value="Search">
+    </div>
+    <div id="info-panel">
+      <h3>Cornell Trivia!</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+          and scrambled it to make a type specimen book.
+      </p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+        and scrambled it to make a type specimen book.
+      </p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. 
+      </p>
     </div>
     <div id="map"></div>
     <script type='text/javascript' src='config.js'></script>
     <script>
+        
       //get api key
       var mykey = config.MY_KEY;
       var url = "https://maps.googleapis.com/maps/api/js?key=" + mykey + "&callback=initMap"
@@ -33,6 +52,33 @@
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: {lat: 42.447917, lng: -76.481454}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
+          
+        document.getElementById('address').addEventListener('keyup', function(e) {
+          if (e.keyCode == 13) {
+            geocodeAddress(geocoder, map);
+          }
+        });
+          
+      }
+
+      function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
         });
       }
     </script>
