@@ -41,7 +41,7 @@ var content = [
         '<h1 id="firstHeading" class="firstHeading">Morril Hall</h1>'+
         '<div id="bodyContent">'+
         '<p>Morrill Hall was constructed in 1868 and was one of the first two buildings on Cornell’s campus (the other being White Hall). It was referred to as ‘South University’ when it was first constructed. Morrill Hall was named after Justin Smith Morrill, the Vermont senator who drove the' +
-        '<a href="https://en.wikipedia.org/wiki/Morrill_Land-Grant_Acts" Morrill Land-Grant Colleges Act of 1862</a>,  a key act that helped with the founding of Cornell University.</p>' +
+        '<a href="https://en.wikipedia.org/wiki/Morrill_Land-Grant_Acts"> Morrill Land-Grant Colleges Act of 1862</a>,  a key act that helped with the founding of Cornell University.</p>' +
         '<p> Currently it houses the departments of Romance Studies, Russian Literature and Linguistics. </p>' +
         '</div>'+
         '</div>',
@@ -137,6 +137,17 @@ var content = [
         '<h1 id="firstHeading" class="firstHeading">Boardman Hall</h1>'+
         '<div id="bodyContent">'+
         '<p>Boardman Hall was opened in 1892 to be the home of the Law School at Cornell. It was named after judge Douglas Boardman, the first dean of the law school. It eventually was torn down to create Olin Library, and busts from the building have been incorporated into the library’s inner and outer walls. </p>' +
+        '</div>'+
+        '</div>',
+    },
+    {
+        location: {lat: 42.451012, lng: -76.483994},
+        title: "Sibley Hall",
+        info: 
+        '<div id="content">'+
+        '<h1 id="firstHeading" class="firstHeading">Sibley Hall</h1>'+
+        '<div id="bodyContent">'+
+        '<p>Sibley Hall was constructed in 1870 and was originally the home of Sibley College of Mechanical Engineering. It was named after Hiram Sibley, one of the original trustees of Cornell. It currently is a part of the Cornell’s College of Architecture, Art, and Planning. It was built in 3 parts.</p>' +
         '</div>'+
         '</div>',
     },

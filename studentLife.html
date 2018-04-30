@@ -10,10 +10,17 @@
   <body>
     <div id="nav">
       <ul class="nav nav-tabs">
-        <li role="presentation" ><a href="index.html">Home</a></li>
-        <li role="presentation" class='active'><a href="studentLife.html">Student Life</a></li>
-        <li role="presentation" ><a href="founding.html">Founding</a></li>
+          <li role="presentation" ><a href="index.html">Home</a></li>
+          <li role="presentation" ><a href="founding.html">Founding</a></li>
+          <li role="presentation" ><a href="growth.html">Growth</a></li>
+          <li role="presentation" ><a href="war.html">War and Unrest</a></li>
+          <li role="presentation" class='active'><a href="studentLife.html">Student Life</a></li>
       </ul>
+    </div>
+    <div id="info-panel">
+        <h3>Student Life at Cornell</h3>
+        <p>Cornell’s campus changed and expanded quickly in its first 50 years. Many generous benefactors made donations to the university and enacted buildings in their name, and notable faculty left their mark on the university with new programs of study.</p>
+        <p>As a state-funded institution, Cornell was under the supervision of the state government, and also received funding to provide studies in the subjects deemed vital by the state. As such, the contract colleges were established; the New York State College of Veterinary Medicine, the New York State College of Home Economics, and the New York State College of Agriculture. The university’s prominence even brought requests from industry, which lead to the founding of a College of Hotel Administration.</p>
     </div>
     <div id="map"></div>
     <script type='text/javascript' src='config.js'></script>
@@ -33,8 +40,8 @@
         
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: {lat: 42.447917, lng: -76.481454}
+          zoom: 15,
+          center: {lat: 42.447896, lng: -76.473442}
         });
 
         // loop though the content for this page, 

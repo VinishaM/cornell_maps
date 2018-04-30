@@ -25,7 +25,7 @@ var content = [
     },
     {
         location: {lat: 42.447454, lng: -76.464906},
-        title: " College of Veterinary Medicine",
+        title: "College of Veterinary Medicine",
         info: 
         '<div id="content">'+
         '<h1 id="firstHeading" class="firstHeading"> College of Veterinary Medicine</h1>'+
@@ -70,6 +70,29 @@ var content = [
         '<div id="bodyContent">'+
         '<p>The School of Hotel Administration was first opened in 1922 by a request from prominent hotel owners and the American Hotel Association. It was the first to offer an undergraduate degree program in hospitality management, and later the first master’s degree program. </p>' +
         '<p><a href="https://sha.cornell.edu/about/history.html"> Learn more</a></p>'+
+        '</div>'+
+        '</div>',
+    },
+    {
+        location: {lat: 42.444820, lng: -76.484180},
+        title: "College of Engineering",
+        info: 
+        '<div id="content">'+
+        '<h1 id="firstHeading" class="firstHeading">College of Engineering</h1>'+
+        '<div id="bodyContent">'+
+        '<p>Engineering moved off the Arts quad after Sibley College merged with the College of Civil Engineering in 1919, establishing the College of Engineering. To keep up with increasing enrollment, construction began on an engineering quadrangle in the 1940’s and 1950s, in the space originally occupied by the Armory. </p>' +
+        '</div>'+
+        '</div>',
+    },
+    {
+        location: {lat: 42.447226, lng: -76.481148},
+        title: "School Industrial Labor Relations",
+        info: 
+        '<div id="content">'+
+        '<h1 id="firstHeading" class="firstHeading">School Industrial Labor Relations</h1>'+
+        '<div id="bodyContent">'+
+        '<p>The New York State School of Industrial and Labor Relations was founded in 1945 based on recommendations from the New York State Joint Legislative Committee on Industrial and Labor Conditions, headed by Irving Ives (who would become the first college Dean). Their goal was to better relations between laborers and managers by leveling the table through common education for those representing both groups.</p>' +
+        '<p>Cornell’s School of Industrial and Labor Relations was the first to offer a 4-year BS this field.</p>' +
         '</div>'+
         '</div>',
     }
