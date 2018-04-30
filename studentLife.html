@@ -166,7 +166,7 @@
         // listener to open the info on click.
 
         var allInfoWindows = [];
-
+        var allMarkers = [];
         console.log(content)
         content.forEach(element => {     
           // info about this element
@@ -183,13 +183,24 @@
             title: element.title
           });
 
-          // add listener to the pin to open the info
+          // add listener to the pin to open the info and hide the info panel
           marker.addListener('click', function() {
-            allInfoWindows.forEach(element => {element.close()}) //close all the windows        
+            allInfoWindows.forEach(element => {element.close();}); //close all the windows  
+            allMarkers.forEach(element => {element.setAnimation(null);}); //close all the windows  
             infowindow.open(map, marker);
             infoPanel.style.display = "none";
+            if (marker.getAnimation() !== null) {
+              marker.setAnimation(null);
+            } else {
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
           });
+
+          // marker.addListener('click', toggleBounce);
+
+
           allInfoWindows.push(infowindow);
+          allMarkers.push(marker);
         });
 
         // on click of the map, make the floating panel appear
