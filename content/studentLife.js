@@ -6,7 +6,7 @@ var content = [
         '<div id="content">'+
         '<h1 id="firstHeading" class="firstHeading">Sage Hall</h1>'+
         '<div id="bodyContent">'+
-        '<p>Sage Hall was opened in 1875 as an all-female dorm for female students on campus, propelled by a gift from Henry Sage' +
+        '<p>Sage Hall was opened in 1875 as an all-female dorm for female students on campus, propelled by a gift from Henry Sage ' +
         'that pushed the university to provide education to both men and women. </p>'+
         '<p> Ezra Cornell placed a letter in the building\'s cornerstone, in which he layed out his goals for Cornell University, saying that ' +
         '"Coeducation of the sexes and entire freedom from sectarian or political preferences is the only proper and safe way for providing an education that shall meet the wants of the future..."</p>'+
@@ -91,8 +91,8 @@ var content = [
         '<div id="content">'+
         '<h1 id="firstHeading" class="firstHeading">Schuyler Hall</h1>'+
         '<div id="bodyContent">'+
-        '<p>First built as a university hospital, Schuyler Hall was a bright, spacious building to heal the sick. Since most students at the time commuted to campus from the city of ithaca, the infirmary was placed at a location in between them. </p>' +
-        '<p>It was later used for graduate, housing and is now open to undergraduates as well.</p>' +
+        '<p>First built as a university hospital, Schuyler Hall was a bright, spacious building meant to the sick. Since most students at the time commuted to campus from the city of Ithaca, the infirmary was placed at a location in between them. </p>' +
+        '<p>It was later used for graduate housing and is now open to undergraduates as well.</p>' +
         '<a href-"https://ithacating.com/2008/11/10/a-little-more-cornell-history/"> Learn More</a>' +
         '</div>'+
         '</div>',
@@ -104,8 +104,8 @@ var content = [
         '<div id="content">'+
         '<h1 id="firstHeading" class="firstHeading">Eddy Gate</h1>'+
         '<div id="bodyContent">'+
-        '<p>Built in 1896, the Eddy Street Gate was the original entrance to the University. On it, Andrew Dickson White placed an inscription that reflect his and Ezra Cornell’s hopes that Cornell students go on to be thoughtful and impactful citizens of the world. It reads:</p>' +
-        '<p>"So enter that thou mayest become more learned and thoughtful, So depart that dally thou mayest become More useful to thy country and mankind."</p>' +
+        '<p>Built in 1896, the Eddy Street Gate was the original entrance to the University. On it, Andrew Dickson White placed an inscription that reflects his and Ezra Cornell’s hopes that Cornell students go on to be thoughtful and impactful citizens of the world. It reads:</p>' +
+        '<p>"So enter that thou mayest become more learned and thoughtful. So depart that dally thou mayest become more useful to thy country and mankind."</p>' +
         '<a href-"http://cdsun.library.cornell.edu/cgi-bin/cornell?a=d&d=CDS19810515.2.7&"> Learn More</a>' +
         '</div>'+
         '</div>',
@@ -117,7 +117,7 @@ var content = [
         '<div id="content">'+
         '<h1 id="firstHeading" class="firstHeading">Touchdown the Bear</h1>'+
         '<div id="bodyContent">'+
-        '<p>Touchdown the bear is Cornell’s unofficial school mascot. Between 1915 and 1930, four live bears, Touchdown I - Touchdown IV, played the role of the university mascot, climbing the goal post before each game. Touchdown IV received nationwide fame when she was let loose in a Cleveland nightclub while traveling to gave against Ohio State. Subsequent mascots were students in  a bear costume. </p>' +
+        '<p>Touchdown the bear is Cornell’s unofficial school mascot. Between 1915 and 1930, four live bears, Touchdown I - Touchdown IV, played the role of the university mascot, climbing the goal post before each game. Touchdown IV received nationwide fame when she was let loose in a Cleveland nightclub while traveling to game against Ohio State. Subsequent mascots were students in  a bear costume. </p>' +
         '</div>'+
         '</div>',
     }, 
