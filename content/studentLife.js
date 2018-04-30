@@ -110,4 +110,15 @@ var content = [
         '</div>'+
         '</div>',
     }, 
+    {
+        location: {lat: 42.445397, lng: -76.479496},
+        title: "Touchdown the Bear",
+        info: 
+        '<div id="content">'+
+        '<h1 id="firstHeading" class="firstHeading">Touchdown the Bear</h1>'+
+        '<div id="bodyContent">'+
+        '<p>Touchdown the bear is Cornell’s unofficial school mascot. Between 1915 and 1930, four live bears, Touchdown I - Touchdown IV, played the role of the university mascot, climbing the goal post before each game. Touchdown IV received nationwide fame when she was let loose in a Cleveland nightclub while traveling to gave against Ohio State. Subsequent mascots were students in  a bear costume. </p>' +
+        '</div>'+
+        '</div>',
+    }, 
 ]
