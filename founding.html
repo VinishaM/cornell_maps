@@ -9,16 +9,21 @@
   </head>
   <body>
     <div id="nav">
-      <ul class="nav nav-tabs">
-        <li role="presentation" ><a href="index.html">Home</a></li>
-        <li role="presentation" class='active'><a href="studentLife.html">Student Life</a></li>
-        <li role="presentation" ><a href="founding.html">Founding</a></li>
-      </ul>
+        <ul class="nav nav-tabs">
+            <li role="presentation" ><a href="index.html">Home</a></li>
+            <li role="presentation" class='active'><a href="founding.html">Founding</a></li>
+            <li role="presentation" ><a href="growth.html">Growth</a></li>
+            <li role="presentation"><a href="studentLife.html">Student Life</a></li>
+        </ul>
+    </div>
+    <div id="info-panel">
+        <h3>The Founding</h3>
+        <p>Cornell University was founded in 1865 by Andrew Dickson White and Ezra Cornell. The two met at senators in the New York State legislature, after Ezra Cornell presented a bill to create a public library in Ithaca. Cornell’s school colors, Carnelian and White, are a nod to Cornell and White. </p>
+        <p>At the time, Cornell had amassed a large fortune and was looking for a way to put it towards a good cause. AD White had always dreamed of establishing a university, and reached out to Ezra Cornell after seeing his contribution to start the Ithaca Public Library. </p>
     </div>
     <div id="map"></div>
     <script type='text/javascript' src='config.js'></script>
-    <script type='text/javascript' src='content/studentLife.js'></script>
-    <script type='text/javascript' src='content/scavengerHunt.js'></script>
+    <script type='text/javascript' src='content/founding.js'></script>
     <script>
       //get api key
       var mykey = config.MY_KEY;
@@ -36,10 +41,18 @@
           zoom: 16,
           center: {lat: 42.447917, lng: -76.481454}
         });
+        
+        // get the infoPanel to show/hide it 
+        var infoPanel = document.getElementById("info-panel");
+
+        // on click of the map, make the floating panel appear
+        map.addListener("click", function() { 
+            infoPanel.style.display = "block";
+        });
 
         // loop though the content for this page, 
         // make a new pin for each element, adding it to the map, and adding an event 
-        // listener to open the info on click.
+        // listener to open the info on click
         console.log(content)
         content.forEach(element => {     
           // info about this element
@@ -54,9 +67,10 @@
             title: element.title
           });
 
-          // add listener to the pin to open the info
+          // add listener to the pin to open the info and hide the info panel
           marker.addListener('click', function() {
             infowindow.open(map, marker);
+            infoPanel.style.display = "none";
           });
         });
       }

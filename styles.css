@@ -34,12 +34,11 @@ html, body {
     right: 4%;
     z-index: 5;
     background-color: #fff;
-    padding: 5px;
+    padding: 25px;
     border: 1px solid #999;
     text-align: center;
     font-family: 'Roboto','sans-serif';
     line-height: 30px;
-    padding-left: 10px;
 }
 
 #info-panel > p {
