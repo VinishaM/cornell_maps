@@ -48,14 +48,21 @@
           center: {lat: 42.447896, lng: -76.473442}
         });
 
+        // get the infoPanel to show/hide it 
+        var infoPanel = document.getElementById("info-panel");
+
         // loop though the content for this page, 
         // make a new pin for each element, adding it to the map, and adding an event 
         // listener to open the info on click.
+
+        var allInfoWindows = [];
+
         console.log(content)
         content.forEach(element => {     
           // info about this element
           var infowindow = new google.maps.InfoWindow({
-            content: element.info
+            content: element.info,
+            maxWidth: 400
           });
 
           // pin at the location of this element
@@ -67,8 +74,17 @@
 
           // add listener to the pin to open the info
           marker.addListener('click', function() {
+            allInfoWindows.forEach(element => {element.close()}) //close all the windows        
             infowindow.open(map, marker);
+            infoPanel.style.display = "none";
           });
+          allInfoWindows.push(infowindow);
+        });
+
+        // on click of the map, make the floating panel appear
+        map.addListener("click", function() { 
+            infoPanel.style.display = "block";
+            allInfoWindows.forEach(element => {element.close()})
         });
       }
     </script>
