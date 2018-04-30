@@ -1,5 +1,6 @@
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
+
 #map {
     height: 93%;
 }
@@ -43,4 +44,25 @@ html, body {
 
 #info-panel > p {
     text-align: left;
+}
+
+h1 { 
+    display: block;
+    font-size: 1.8em !important; 
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+} 
+
+#bodyContent{
+    line-height: 1.5em;
+    font-size: 1.1em !important;
+}
+
+#content{
+    margin-left: 0.9em;
+    margin-right: 0.9em;
+    
 }
