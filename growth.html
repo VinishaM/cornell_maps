@@ -180,8 +180,6 @@
             title: element.title
           });
 
-          marker.zIndex = 400;
-
           // add listener to the pin to open the info and hide the info panel
           marker.addListener('click', function() {
             allInfoWindows.forEach(element => {element.close();}); //close all the windows  
@@ -209,6 +207,7 @@
         map.addListener("click", function() { 
             infoPanel.style.display = "block";
             allInfoWindows.forEach(element => {element.close()})
+            allMarkers.forEach(element => {element.setAnimation(null);}); //close all the windows  
         });
       }
 
